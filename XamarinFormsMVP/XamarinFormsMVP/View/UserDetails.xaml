@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<view:ContentPageBase
+            xmlns:view="clr-namespace:XamarinFormsMVP.View"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="XamarinFormsMVP.View.UserDetails"
+            xmlns:presenters="clr-namespace:XamarinFormsMVP.Presenter"
+            x:TypeArguments="presenters:UserDetailsPresenter">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid Padding="4,0,4,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Name:" VerticalOptions="CenterAndExpand"></Label>
+                <Entry x:Name="NameEntry" Grid.Row="0" Grid.Column="1"></Entry>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="E-mail:" VerticalOptions="CenterAndExpand"></Label>
+                <Entry x:Name="EmailEntry" Grid.Row="1" Grid.Column="1"></Entry>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Telephone:" VerticalOptions="CenterAndExpand"></Label>
+                <Entry x:Name="TelephoneEntry" Grid.Row="2" Grid.Column="1"></Entry>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Age:" VerticalOptions="CenterAndExpand"></Label>
+                <Entry x:Name="AgeEntry" Grid.Row="3" Grid.Column="1"></Entry>
+
+                <Button x:Name="SaveButton" Grid.Row="4" Grid.ColumnSpan="2" Text="Save" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</view:ContentPageBase>

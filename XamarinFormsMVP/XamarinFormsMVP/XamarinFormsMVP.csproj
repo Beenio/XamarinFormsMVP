@@ -5,6 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="3.1.8" />
+    <PackageReference Include="Realm" Version="3.1.0" />
+    <PackageReference Include="SimpleInjector" Version="4.3.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\Interactor\" />
+    <Folder Include="Model\Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\UserDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\UserList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

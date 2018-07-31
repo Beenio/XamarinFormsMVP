@@ -1,6 +1,8 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinFormsMVP.Configuration;
+using XamarinFormsMVP.View;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace XamarinFormsMVP
@@ -10,9 +12,9 @@ namespace XamarinFormsMVP
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
-		}
+            GlobalConfiguration.Configure();
+            MainPage = new NavigationPage(new UserList());
+        }
 
 		protected override void OnStart ()
 		{

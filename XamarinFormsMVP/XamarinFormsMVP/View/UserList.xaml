@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<view:ContentPageBase
+    xmlns:view="clr-namespace:XamarinFormsMVP.View"
+    xmlns:Cell="clr-namespace:XamarinFormsMVP.Cells"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsMVP.View.UserList"
+    xmlns:presenters="clr-namespace:XamarinFormsMVP.Presenter"
+    x:TypeArguments="presenters:UserListPresenter">
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView x:Name="ListView">
+                <x:Arguments>
+                    <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+                </x:Arguments>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Cell:UserCell/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label x:Name="LabelEmpty" Text="Empty List" HorizontalOptions="Center" IsVisible="False"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</view:ContentPageBase>
