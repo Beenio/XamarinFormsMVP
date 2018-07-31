@@ -1,4 +1,5 @@
 ﻿using SimpleInjector;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -38,6 +39,12 @@ namespace XamarinFormsMVP.View
         {
             ToolbarItems.Add(new ToolbarItem("ADD", string.Empty, AddUser));
             ListView.ItemsSource = ItemsList;
+            ListView.ItemTapped += ItemTapped;
+        }
+
+        private void ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Presenter.ItemTapped((UserViewModel) e.Item);
         }
 
         public void SetupActions()

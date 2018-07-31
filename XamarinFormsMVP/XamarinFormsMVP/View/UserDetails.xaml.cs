@@ -60,7 +60,8 @@ namespace XamarinFormsMVP.View
                 Age = AgeEntry.Text,
                 Email = EmailEntry.Text,
                 Name = NameEntry.Text,
-                Telephone = TelephoneEntry.Text
+                Telephone = TelephoneEntry.Text,
+                Id = User?.Id
             });
         }
 

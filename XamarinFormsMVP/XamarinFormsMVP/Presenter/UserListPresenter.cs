@@ -45,5 +45,20 @@ namespace XamarinFormsMVP.Presenter
                 }              
             });
         }
+
+        public async void ItemTapped(UserViewModel User)
+        {
+            await Task.Run(() =>
+            {
+                try
+                {
+                    View.GoToUserDetails(User);
+                }
+                catch (Exception e)
+                {
+                    View.HandleFailure(e.Message);
+                }
+            });
+        }
     }
 }
