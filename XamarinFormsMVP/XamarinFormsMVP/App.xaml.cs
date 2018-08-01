@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinFormsMVP.Configuration;
 using XamarinFormsMVP.View;
+using XamarinFormsMVP.View.Menu;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace XamarinFormsMVP
@@ -13,7 +14,7 @@ namespace XamarinFormsMVP
 		{
 			InitializeComponent();
             GlobalConfiguration.Configure();
-            MainPage = new NavigationPage(new UserList());
+            MainPage = new MasterNavigation();
         }
 
 		protected override void OnStart ()
